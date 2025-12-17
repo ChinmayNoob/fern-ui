@@ -1,9 +1,21 @@
 import Link from "next/link"
-import { ArrowRight, Layers, MousePointerClick, Sparkles, Tag } from "lucide-react"
+import { ArrowRight, Disc3, Layers, MousePointerClick, Sparkles, Tag, Users } from "lucide-react"
 
 import { CodeBlock } from "@/components/ui/code-block"
 
 const components = [
+    {
+        name: "Album Cards",
+        description: "Expandable album cards with animated lyrics display",
+        href: "/explore/album-cards",
+        icon: Disc3,
+    },
+    {
+        name: "Artist List",
+        description: "Interactive artist showcase with hover-activated profiles",
+        href: "/explore/artist-list",
+        icon: Users,
+    },
     {
         name: "Button",
         description: "Interactive button with multiple variants and sizes",

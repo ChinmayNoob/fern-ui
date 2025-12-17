@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-providers";
@@ -20,6 +20,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-courier-prime",
+});
+
 export const metadata: Metadata = {
   title: "fern-ui — Minimal Component Library",
   description: "A minimal, elegant component library for building beautiful interfaces. Copy. Paste. Ship.",
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${courierPrime.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

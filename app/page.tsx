@@ -29,7 +29,7 @@ export default function Home() {
       </header>
 
       {/* Subtle grid pattern */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--foreground)/0.02)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground)/0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--foreground)/0.02)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground)/0.02)_1px,transparent_1px)] bg-size-[4rem_4rem]" />
 
       {/* Purple/violet gradient smoke */}
       <div className="pointer-events-none absolute -left-20 top-1/4 h-[600px] w-[600px] rounded-full bg-linear-to-br from-violet-500/20 via-purple-500/15 to-transparent blur-3xl dark:from-violet-500/30 dark:via-purple-600/20" />
@@ -58,7 +58,6 @@ export default function Home() {
       </div>
 
       <div className="relative mx-auto flex min-h-screen max-w-4xl flex-col items-center justify-center px-6">
-        {/* Badge */}
         <div className="mb-8 inline-flex items-center gap-2 border border-foreground/10 bg-foreground/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
           <Link href="https://github.com/fern-ui/fern-ui">
             <Github className="w-4 h-4" />
@@ -66,7 +65,6 @@ export default function Home() {
           Open Source UI Library
         </div>
 
-        {/* Main heading */}
         <div className="flex items-center justify-center">
           <Image
             src="/vector.png"
@@ -80,7 +78,6 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* Tagline */}
         <p className="mt-6 max-w-md text-center text-sm leading-relaxed text-muted-foreground">
           A minimal, elegant component library for building beautiful interfaces.
           Copy. Paste. Ship.
