@@ -125,3 +125,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Feather floating animation - horizontal */
+@keyframes feather-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-6px) translateX(3px);
+  }
+  50% {
+    transform: translateY(-3px) translateX(-2px);
+  }
+  75% {
+    transform: translateY(-8px) translateX(2px);
+  }
+}
+
+.animate-feather-float {
+  animation: feather-float 5s ease-in-out infinite;
+}
