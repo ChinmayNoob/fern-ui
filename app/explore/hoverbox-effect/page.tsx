@@ -142,8 +142,11 @@ export default function HoverBoxEffectPage() {
         <div className="space-y-12">
             {/* Header */}
             <div className="space-y-4">
-                <h1 className="text-3xl font-bold tracking-tight">Hover Box Effect</h1>
-                <p className="text-muted-foreground">
+                <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-muted-foreground">
+                    Components / Hover Box Effect
+                </div>
+                <h1 className="font-serif text-4xl tracking-tight">Hover Box Effect</h1>
+                <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
                     A 3D flip effect that rotates content on the X-axis when hovered.
                     Features grayscale front face, smooth transitions, and respects reduced motion preferences.
                 </p>

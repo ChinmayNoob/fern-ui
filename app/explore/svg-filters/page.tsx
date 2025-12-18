@@ -382,9 +382,6 @@ const sourceFiles = [
     { filename: 'svg-filters.css', code: cssSource, language: 'css' },
 ]
 
-// Custom lines for different preview examples
-const turbulenceItems = demoSvgFilterItems.filter(item => item.filterType === 'turbulence')
-const displacementItems = demoSvgFilterItems.filter(item => item.filterType === 'displacementMap')
 
 export default function SvgFiltersPage() {
     return (
@@ -417,27 +414,7 @@ export default function SvgFiltersPage() {
                 </ComponentPreview>
             </section>
 
-            {/* Turbulence Filter Preview */}
-            <section className="space-y-4">
-                <h2 className="text-lg font-medium">Turbulence Filter</h2>
-                <p className="text-sm text-muted-foreground">
-                    Creates a wave-like distortion effect. Adjust the <code className="text-xs bg-muted px-1 py-0.5 rounded">scale</code> property for intensity.
-                </p>
-                <ComponentPreview className="min-h-[400px] p-4">
-                    <SvgFilters items={turbulenceItems} />
-                </ComponentPreview>
-            </section>
 
-            {/* Displacement Map Preview */}
-            <section className="space-y-4">
-                <h2 className="text-lg font-medium">Displacement Map Filter</h2>
-                <p className="text-sm text-muted-foreground">
-                    Creates a liquid-like distortion. Configure <code className="text-xs bg-muted px-1 py-0.5 rounded">baseFrequency</code> and channel selectors for different effects.
-                </p>
-                <ComponentPreview className="min-h-[400px] p-4">
-                    <SvgFilters items={displacementItems} />
-                </ComponentPreview>
-            </section>
 
             {/* Usage */}
             <section className="space-y-4">
