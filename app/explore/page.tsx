@@ -195,7 +195,7 @@ export default function GettingStartedPage() {
                             className="group flex items-center justify-between border border-foreground/5 bg-foreground/[0.01] p-4 transition-all hover:border-foreground/10 hover:bg-foreground/[0.02]"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center bg-foreground/5">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-foreground/10 bg-foreground/5">
                                     <component.icon className="h-5 w-5 text-muted-foreground" />
                                 </div>
                                 <div>
