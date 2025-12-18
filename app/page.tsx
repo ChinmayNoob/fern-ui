@@ -59,7 +59,7 @@ export default function Home() {
 
       <div className="relative mx-auto flex min-h-screen max-w-4xl flex-col items-center justify-center px-6">
         <div className="mb-8 inline-flex items-center gap-2 border border-foreground/10 bg-foreground/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
-          <Link href="https://github.com/fern-ui/fern-ui">
+          <Link href="https://github.com/ChinmayNoob/fern-ui">
             <Github className="w-4 h-4" />
           </Link>
           Open Source UI Library
