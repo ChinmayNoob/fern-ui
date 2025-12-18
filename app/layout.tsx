@@ -34,7 +34,11 @@ const courierPrime = Courier_Prime({
 
 export const metadata: Metadata = {
   title: "fern-ui — Minimal Component Library",
-  description: "A minimal, elegant component library for building beautiful interfaces. Copy. Paste. Ship.",
+  description:
+    "A minimal, elegant component library for building beautiful interfaces. Copy. Paste. Ship.",
+  icons: {
+    icon: "/og.png",
+  },
 };
 
 export default function RootLayout({
