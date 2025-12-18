@@ -1,5 +1,21 @@
 import Link from "next/link"
-import { ArrowRight, Disc3, Layers, MousePointerClick, Sparkles, Tag, Users } from "lucide-react"
+import {
+    ArrowRight,
+    Disc3,
+    Layers,
+    MousePointerClick,
+    Sparkles,
+    Tag,
+    Users,
+    Image,
+    Diamond,
+    GripHorizontal,
+    FlipVertical,
+    Gamepad2,
+    Zap,
+    GalleryHorizontalEnd,
+    RotateCcw,
+} from "lucide-react"
 
 import { CodeBlock } from "@/components/ui/code-block"
 
@@ -11,10 +27,22 @@ const components = [
         icon: Disc3,
     },
     {
+        name: "Animated Image",
+        description: "Diamond-shaped image that expands and reveals color on hover",
+        href: "/explore/animated-image",
+        icon: Image,
+    },
+    {
         name: "Artist List",
         description: "Interactive artist showcase with hover-activated profiles",
         href: "/explore/artist-list",
         icon: Users,
+    },
+    {
+        name: "Badge",
+        description: "Small label for status indicators and tags",
+        href: "/explore/badge",
+        icon: Tag,
     },
     {
         name: "Button",
@@ -29,16 +57,82 @@ const components = [
         icon: Layers,
     },
     {
-        name: "Badge",
-        description: "Small label for status indicators and tags",
-        href: "/explore/badge",
-        icon: Tag,
+        name: "Diamond Gallery",
+        description: "Four-image diamond layout with hover focus effects",
+        href: "/explore/diamond-gallery",
+        icon: Diamond,
+    },
+    {
+        name: "Draggable Cards",
+        description: "Polaroid-style draggable album cards",
+        href: "/explore/draggable-cards",
+        icon: GripHorizontal,
     },
     {
         name: "Hero Section",
         description: "Landing page hero with animated sparkles (multi-file example)",
         href: "/explore/hero-section",
         icon: Sparkles,
+    },
+    {
+        name: "Hover Disclosure",
+        description: "Horizontally expanding hover gallery for artists",
+        href: "/explore/hover-disclosure",
+        icon: Layers,
+    },
+    {
+        name: "Hover Flip Card",
+        description: "Card that flips to reveal an image background on hover",
+        href: "/explore/hover-flip-card",
+        icon: Sparkles,
+    },
+    {
+        name: "Hover Gallery",
+        description: "Stacked gallery that expands into a 2x2 grid on hover",
+        href: "/explore/hover-gallery",
+        icon: GalleryHorizontalEnd,
+    },
+    {
+        name: "HoverBox Effect",
+        description: "3D flip effect that reveals back content on hover",
+        href: "/explore/hoverbox-effect",
+        icon: RotateCcw,
+    },
+    {
+        name: "Shiny Wrap",
+        description: "Shimmering highlight wrapper for images and cards",
+        href: "/explore/shiny-wrap",
+        icon: Sparkles,
+    },
+    {
+        name: "Spider Button",
+        description: "Spiderman-themed comic buttons with hover effects",
+        href: "/explore/spider-button",
+        icon: Zap,
+    },
+    {
+        name: "Splitflap",
+        description: "Split-flap display component for dynamic text",
+        href: "/explore/splitflap",
+        icon: FlipVertical,
+    },
+    {
+        name: "SVG Filters",
+        description: "Image hover effects using SVG turbulence and displacement",
+        href: "/explore/svg-filters",
+        icon: Image,
+    },
+    {
+        name: "Tilt Card",
+        description: "Mouse-position-based 3D tilt effect for cards",
+        href: "/explore/tilt-card",
+        icon: MousePointerClick,
+    },
+    {
+        name: "Valorant Button",
+        description: "Valorant-inspired animated button variants",
+        href: "/explore/valorant-button",
+        icon: Gamepad2,
     },
 ]
 

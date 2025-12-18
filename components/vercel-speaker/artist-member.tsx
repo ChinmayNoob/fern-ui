@@ -18,14 +18,14 @@ export function ArtistMember({ artist, isActive, onHover }: ArtistMemberProps) {
             <div className="flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
                     <motion.h3
-                        className={`mb-1 sm:mb-2 font-courier-prime text-lg sm:text-2xl font-bold tracking-wider transition-colors duration-400 truncate ${isActive ? 'text-zinc-300' : 'text-zinc-700'} `}
+                        className={`mb-1 sm:mb-2 font-serif text-lg sm:text-2xl font-bold tracking-wider transition-colors duration-400 truncate ${isActive ? 'text-zinc-300' : 'text-zinc-700'} `}
                         animate={{ y: isActive ? -5 : 0 }}
                         transition={{ type: "spring", bounce: 0.5, duration: 0.6 }}
                     >
                         {artist.name}
                     </motion.h3>
                     <motion.p
-                        className={`font-courier-prime text-sm sm:text-lg tracking-wide text-zinc-400 uppercase`}
+                        className={`font-serif text-sm sm:text-lg tracking-wide text-zinc-400 uppercase`}
                         initial={{ opacity: 0, height: 0 }}
                         animate={{
                             height: isActive ? 'auto' : 0,

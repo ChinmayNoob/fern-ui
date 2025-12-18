@@ -85,7 +85,7 @@ export default function Home() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-          <Button asChild size="lg" className="group gap-2 px-6 bg-purple-500 text-white hover:bg-violet-600 font-bold">
+          <Button asChild size="lg" className="group gap-2 px-6 font-bold rounded-lg font-inter">
             <Link href="/explore">
               Explore Components
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Splitflap Component - Theme-aware styles */
+.root {
+    --perspective: 1;
+    --flip-bg: hsl(var(--card));
+    --flip-bg-light: hsl(0 0% 92%);
+    --flip-bg-dark: hsl(0 0% 15%);
+    --flip-accent: hsl(var(--muted));
+    --board-bg: hsl(0 0% 10%);
+    --board-bg-light: hsl(0 0% 85%);
+}
+
+/* Dark theme overrides */
+:global(.dark) .root {
+    --flip-bg-light: hsl(0 0% 20%);
+    --flip-bg-dark: hsl(0 0% 12%);
+    --board-bg: hsl(0 0% 5%);
+}
+
+/* Flip animation layers */
+.flip>div:nth-of-type(2) {
+    z-index: 2;
+    transform: rotateX(-180deg);
+    backface-visibility: hidden;
+}
+
+.flip div:nth-of-type(3) {
+    z-index: 3;
+    backface-visibility: hidden;
+}
+
+/* Container */
+.splitflapContainer {
+    align-content: center;
+    gap: 1.5rem;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    min-height: 400px;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue',
+        Helvetica, Arial, sans-serif, system-ui;
+    position: relative;
+    width: 100%;
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+
+/* Optional grid background */
+.splitflapContainer.withGrid::before {
+    --size: 45px;
+    --line: hsl(var(--foreground) / 0.1);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(90deg,
+            var(--line) 1px,
+            transparent 1px var(--size)) 50% 50% / var(--size) var(--size),
+        linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size);
+    mask: linear-gradient(-20deg, transparent 50%, white);
+    top: 0;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Board */
+.board {
+    display: flex;
+    gap: 0.4ch;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    padding: 8px;
+    background: var(--board-bg);
+    border-radius: 4px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+:global(.dark) .board {
+    background: hsl(0 0% 5%);
+}
+
+/* Flip Line */
+.flipLine {
+    display: flex;
+    gap: 0.4ch;
+}
+
+/* Individual Flip Character */
+.flip {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--color, hsl(var(--foreground)));
+    width: 1.5ch;
+    line-height: 1.2;
+    display: inline-block;
+    height: 1lh;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: calc(var(--perspective) * 1em);
+}
+
+/* Side clips/hinges */
+.flip::before,
+.flip::after {
+    content: '';
+    position: absolute;
+    width: calc(10% - 0.05em);
+    height: calc(20% - 0.05em);
+    background: hsl(var(--muted));
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.flip::before {
+    left: 0;
+}
+
+.flip::after {
+    right: 0;
+}
+
+.flip .flipHolder {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+}
+
+/* Flip panels */
+.flip div {
+    position: absolute;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    inset: 0;
+    background: radial-gradient(100% 100% at 50% 100%,
+            hsl(var(--foreground) / 0.05),
+            transparent),
+        var(--flip-bg-light);
+}
+
+:global(.dark) .flip div {
+    background: radial-gradient(100% 100% at 50% 100%,
+            hsl(0 0% 60% / 0.15),
+            transparent),
+        var(--flip-bg-dark);
+}
+
+/* Top half clip */
+.flip div:nth-of-type(odd) {
+    clip-path: polygon(0 0,
+            100% 0,
+            100% 40%,
+            calc(90% + 0.025em) 40%,
+            calc(90% + 0.025em) 48%,
+            calc(10% - 0.025em) 48%,
+            calc(10% - 0.025em) 40%,
+            0 40%);
+}
+
+/* Bottom half clip */
+.flip div:nth-of-type(even) {
+    clip-path: polygon(0 60%,
+            calc(10% - 0.025em) 60%,
+            calc(10% - 0.025em) 52%,
+            calc(90% + 0.025em) 52%,
+            calc(90% + 0.025em) 60%,
+            100% 60%,
+            100% 100%,
+            0 100%);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.buttonSecondary {
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+}
+
+/* Screen reader only */
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+    .splitflapContainer {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+
+    .board {
+        padding: 4px;
+        gap: 0.3ch;
+    }
+
+    .flipLine {
+        gap: 0.3ch;
+    }
+
+    .flip {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .controls {
+        flex-direction: row;
+    }
+
+    .button {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}

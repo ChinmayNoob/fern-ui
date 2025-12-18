@@ -336,22 +336,5 @@ export const demoAlbums: Album[] = [
             "...",
         ]
     },
-    {
-        id: "nothing was the same",
-        title: "furthest things",
-        artist: "Drake",
-        image: "/albums/nwts.png",
-        lines: [
-            "...",
-            "I just been drinking on the low",
-            "Mobbing on the low",
-            "Fucking on the low",
-            "Smoking on the low",
-            "I just been plotting on the low",
-            "Scheming on the low",
-            "The furthest thing from perfect, like everyone I know",
-            "...",
-        ]
-    }
 ];
 

@@ -3,12 +3,24 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { BookOpen, Box, ChevronLeft, Disc3, Layers, Menu, MousePointerClick, Sparkles, Tag, Users, X } from "lucide-react"
+import { BookOpen, Box, ChevronLeft, Diamond, Disc3, FlipVertical, Gamepad2, GalleryHorizontalEnd, GripHorizontal, Image, Layers, Menu, MousePointerClick, RotateCcw, Sparkles, Tag, Users, X, Zap } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 
-const sidebarItems = [
+type SidebarItem = {
+    name: string
+    href: string
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+    badge?: string
+}
+
+type SidebarSection = {
+    title: string
+    items: SidebarItem[]
+}
+
+const sidebarItems: SidebarSection[] = [
     {
         title: "Overview",
         items: [
@@ -18,12 +30,21 @@ const sidebarItems = [
     {
         title: "Components",
         items: [
-            { name: "Album Cards", href: "/explore/album-cards", icon: Disc3 },
+            { name: "Album Cards", href: "/explore/album-cards", icon: Disc3, badge: "New" },
+            { name: "Animated Image", href: "/explore/animated-image", icon: Image, badge: "New" },
             { name: "Artist List", href: "/explore/artist-list", icon: Users },
-            { name: "Button", href: "/explore/button", icon: MousePointerClick },
-            { name: "Card", href: "/explore/card", icon: Layers },
-            { name: "Badge", href: "/explore/badge", icon: Tag },
-            { name: "Hero Section", href: "/explore/hero-section", icon: Sparkles },
+            { name: "Diamond Gallery", href: "/explore/diamond-gallery", icon: Diamond, badge: "New" },
+            { name: "Draggable Cards", href: "/explore/draggable-cards", icon: GripHorizontal },
+            { name: "Hover Disclosure", href: "/explore/hover-disclosure", icon: Layers },
+            { name: "Hover Flip Card", href: "/explore/hover-flip-card", icon: Sparkles },
+            { name: "Hover Gallery", href: "/explore/hover-gallery", icon: GalleryHorizontalEnd },
+            { name: "HoverBox Effect", href: "/explore/hoverbox-effect", icon: RotateCcw },
+            { name: "Shiny Wrap", href: "/explore/shiny-wrap", icon: Sparkles, badge: "New" },
+            { name: "Spider Button", href: "/explore/spider-button", icon: Zap, badge: "New" },
+            { name: "Splitflap", href: "/explore/splitflap", icon: FlipVertical, badge: "New" },
+            { name: "SVG Filters", href: "/explore/svg-filters", icon: Image },
+            { name: "Tilt Card", href: "/explore/tilt-card", icon: MousePointerClick, badge: "New" },
+            { name: "Valorant Button", href: "/explore/valorant-button", icon: Gamepad2, badge: "New" },
         ],
     },
 ]
@@ -125,7 +146,14 @@ export default function ExploreLayout({
                                                 )}
                                             >
                                                 <item.icon className="h-4 w-4" />
-                                                {item.name}
+                                                <span className="flex items-center gap-1">
+                                                    <span>{item.name}</span>
+                                                    {item.badge && (
+                                                        <span className="rounded-full border border-foreground/10 bg-foreground/5 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-widest text-muted-foreground">
+                                                            {item.badge}
+                                                        </span>
+                                                    )}
+                                                </span>
                                             </Link>
                                         </li>
                                     )
@@ -160,7 +188,14 @@ export default function ExploreLayout({
                                                     )}
                                                 >
                                                     <item.icon className="h-4 w-4" />
-                                                    {item.name}
+                                                    <span className="flex items-center gap-1">
+                                                        <span>{item.name}</span>
+                                                        {item.badge && (
+                                                            <span className="rounded-full border border-foreground/10 bg-foreground/5 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-widest text-muted-foreground">
+                                                                {item.badge}
+                                                            </span>
+                                                        )}
+                                                    </span>
                                                 </Link>
                                             </li>
                                         )

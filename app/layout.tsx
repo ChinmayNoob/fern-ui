@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Courier_Prime } from "next/font/google";
+import { Geist, Geist_Mono, Courier_Prime, Inter } from "next/font/google";
 import "./globals.css";
 import { Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-providers";
@@ -8,6 +8,12 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-instrument-serif",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
 });
 
 const geistSans = Geist({
@@ -39,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${courierPrime.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${courierPrime.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
