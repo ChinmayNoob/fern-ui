@@ -15,6 +15,7 @@ import {
     Zap,
     GalleryHorizontalEnd,
     RotateCcw,
+    LayoutPanelTop,
 } from "lucide-react"
 
 import { CodeBlock } from "@/components/ui/code-block"
@@ -105,6 +106,12 @@ const components = [
         icon: Sparkles,
     },
     {
+        name: "Scroll Feed Tabs",
+        description: "Pill tab strip with sliding glow, pointer-reactive highlight, and Radix Tabs",
+        href: "/explore/scroll-feed-tabs",
+        icon: LayoutPanelTop,
+    },
+    {
         name: "Spider Button",
         description: "Spiderman-themed comic buttons with hover effects",
         href: "/explore/spider-button",
@@ -137,7 +144,7 @@ const components = [
 ]
 
 const installCode = `# Install dependencies
-pnpm add class-variance-authority clsx tailwind-merge radix-ui lucide-react`
+pnpm add class-variance-authority clsx tailwind-merge radix-ui motion lucide-react`
 
 const utilsCode = `// lib/utils.ts
 import { clsx, type ClassValue } from "clsx"

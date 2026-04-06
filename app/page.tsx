@@ -7,7 +7,6 @@ import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { Feather } from "@/components/ui/feather"
 
 
-
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
