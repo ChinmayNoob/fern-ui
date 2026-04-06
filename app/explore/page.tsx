@@ -16,6 +16,7 @@ import {
     GalleryHorizontalEnd,
     RotateCcw,
     LayoutPanelTop,
+    Table,
 } from "lucide-react"
 
 import { CodeBlock } from "@/components/ui/code-block"
@@ -92,6 +93,12 @@ const components = [
         description: "Stacked gallery that expands into a 2x2 grid on hover",
         href: "/explore/hover-gallery",
         icon: GalleryHorizontalEnd,
+    },
+    {
+        name: "Inline Table Control",
+        description: "Inline row editing with layout transitions and focus management",
+        href: "/explore/inline-table-control",
+        icon: Table,
     },
     {
         name: "HoverBox Effect",
