@@ -68,7 +68,7 @@ class FlipSlot {
     constructor(options: FlipSlotOptions = {}) {
         const {
             characters = DEFAULT_CHARACTERS,
-            color = 'hsl(var(--foreground))',
+            color = 'var(--flip-text)',
             pad = 0,
         } = options
         this.characters = Array.from(` ${characters} `)
@@ -202,7 +202,7 @@ class FlipLine {
 
     constructor(options: FlipLineOptions = {}, textLength: number = DEFAULT_TEXT_LENGTH) {
         const { color, length = textLength, pad = 0 } = options
-        this.colorSet = color || 'hsl(var(--foreground))'
+        this.colorSet = color || 'var(--flip-text)'
         this.length = length
         this.padding = pad
         this.options = options

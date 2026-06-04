@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import Splitflap from "@/components/splitflap/splitflap"
 
 const usageCode = `import Splitflap from "@/components/splitflap/splitflap"
@@ -487,6 +488,16 @@ export default function SplitflapPage() {
                     text alignment, and flip speed. Fully theme-aware and responsive.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/splitflap"} />
+            </section>
+
 
             {/* Preview */}
             <section className="space-y-4">

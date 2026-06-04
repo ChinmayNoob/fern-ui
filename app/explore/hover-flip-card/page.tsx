@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import HoverFlipCard from "@/components/hover-flip-card/hover-flip-card"
 
 const usageCode = `import HoverFlipCard from "@/components/hover-flip-card/hover-flip-card"
@@ -94,6 +95,16 @@ export default function HoverFlipCardPage() {
                     with the same content rendered on both sides for a seamless effect.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/hover-flip-card"} />
+            </section>
+
 
             {/* Live Preview */}
             <section className="space-y-4">

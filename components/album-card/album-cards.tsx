@@ -2,7 +2,6 @@
 "use client";
 
 import { motion, useAnimate, AnimationScope } from "motion/react";
-import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 import { cn } from "@/lib/utils";
@@ -157,9 +156,7 @@ export function AlbumCards({ albums, className }: AlbumCardsProps) {
                             "flex gap-4 justify-between cursor-pointer w-full sticky top-0 z-10 bg-card",
                             isMobile ? "p-3" : "p-4"
                         )}>
-                            <Image
-                                width={144}
-                                height={144}
+                            <img
                                 src={album.image}
                                 alt={album.id}
                                 className={cn(

@@ -1,6 +1,12 @@
-
-import { ValorantButtonProps } from "./valorant-playground";
+import { ButtonHTMLAttributes } from "react";
 import S from "./valorant.module.css";
+
+export type ValorantButtonProps = {
+    text?: string;
+    buttonColor?: number;
+    textColor?: string;
+    variant?: 'default' | 'liquid' | 'neon' | 'warp';
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function ValorantButton({
     text = "JOIN NOW",

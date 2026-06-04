@@ -3,6 +3,7 @@
 import { InlineTableControl } from "@/components/inline-table-control"
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 
 const usageCode = `import { InlineTableControl } from "@/components/inline-table-control"
 
@@ -23,6 +24,14 @@ export default function InlineTableControlPage() {
           transitions, focus lock on desktop, and keyboard escape to cancel.
         </p>
       </div>
+
+      <section className="space-y-4">
+        <h2 className="text-lg font-medium">Installation</h2>
+        <p className="text-sm text-muted-foreground">
+          Install the component using the shadcn CLI:
+        </p>
+        <InstallCommand command="npx shadcn@latest add ChinmayNoob/fern-ui/inline-table-control" />
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-lg font-medium">Preview</h2>

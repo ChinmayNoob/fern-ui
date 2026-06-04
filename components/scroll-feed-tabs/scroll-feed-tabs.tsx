@@ -142,7 +142,14 @@ function getActiveTabBoundsPercentage(activeTabElement: HTMLAnchorElement) {
   };
 }
 
-export const PeerlistScrollFeedTabs = () => {
+export interface ScrollFeedTabsProps {
+  className?: string
+}
+
+export const SCROLL_FEED_TABS = TABS
+export type ScrollFeedTabId = (typeof TABS)[keyof typeof TABS]
+
+export const ScrollFeedTabs = () => {
   const [activeTab, setActiveTab] = useState({
     name: "newest",
     leftPercentage: 0,

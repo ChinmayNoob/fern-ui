@@ -1,7 +1,5 @@
-'use client'
 import { type Artist } from "./artist";
 import { motion } from "motion/react";
-import Image from "next/image";
 
 interface ArtistProfileProps {
     artist: Artist;
@@ -15,14 +13,13 @@ export function ArtistProfile({ artist }: ArtistProfileProps) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    key={typeof artist.image === "string" ? artist.image : artist.image.src}
+                    key={artist.image}
                     className="h-full w-full"
                 >
-                    <Image
+                    <img
                         src={artist.image}
                         alt={artist.name}
                         className="h-full w-full object-cover"
-                        fill
                     />
                 </motion.div>
             ) : (

@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import ShinyWrapper from "@/components/shiny-wrap/shiny-wrapper"
 
 const usageCode = `import ShinyWrapper from "@/components/shiny-wrap/shiny-wrapper"
@@ -100,6 +101,16 @@ export default function ShinyWrapPage() {
                     Great for featured cards, album covers, or hero images.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/shiny-wrap"} />
+            </section>
+
 
             {/* Live Preview */}
             <section className="space-y-4">

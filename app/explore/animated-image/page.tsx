@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import AnimatedImage from "@/components/animated-image/animated-image"
 
 const usageCode = `import AnimatedImage from "@/components/animated-image/animated-image"
@@ -82,6 +83,16 @@ export default function AnimatedImagePage() {
                     Perfect for adding subtle motion to avatars, covers, or feature images.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/animated-image"} />
+            </section>
+
 
             {/* Live Preview */}
             <section className="space-y-4">

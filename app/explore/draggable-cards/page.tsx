@@ -1,6 +1,7 @@
 import { DraggableCards, demoDraggableCards } from "@/components/draggable-cards/draggable-cards"
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 
 const usageCode = `import { DraggableCards, DraggableCardItem } from "@/components/ui/draggable-cards"
 
@@ -192,6 +193,16 @@ export default function DraggableCardsPage() {
                     desktop and mobile sizing.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/draggable-cards"} />
+            </section>
+
 
             {/* Preview */}
             <section className="space-y-4">

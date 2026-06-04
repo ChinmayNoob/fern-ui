@@ -1,6 +1,7 @@
 import { AlbumCards, demoAlbums } from "@/components/album-card/album-cards"
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 
 const usageCode = `import { AlbumCards, Album } from "@/components/ui/album-cards"
 
@@ -193,6 +194,16 @@ export default function AlbumCardsPage() {
                     text effect. Fully responsive — shows one card at a time on mobile with navigation controls.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/album-card"} />
+            </section>
+
 
             {/* Preview */}
             <section className="space-y-4">

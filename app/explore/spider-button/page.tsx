@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import SpiderButton from "@/components/spiderman-theme-buttons/spider-button"
 
 const usageCode = `import SpiderButton from "@/components/spiderman-theme-buttons/spider-button"
@@ -314,6 +315,16 @@ export default function SpiderButtonPage() {
                     custom cursors, and a satisfying tap animation. Five color variants available.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/spider-button"} />
+            </section>
+
 
             {/* Preview - All Variants */}
             <section className="space-y-4">

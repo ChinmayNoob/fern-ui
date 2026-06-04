@@ -1,0 +1,284 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "fern-ui",
+  "homepage": "https://github.com/ChinmayNoob/fern-ui",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "Shared utility functions including the cn() helper for Tailwind class merging.",
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "animated-image",
+      "type": "registry:ui",
+      "title": "Animated Image",
+      "description": "A diamond-shaped image that morphs into a full rectangle on hover with grayscale-to-color transition.",
+      "files": [
+        {
+          "path": "components/animated-image/animated-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shiny-wrap",
+      "type": "registry:ui",
+      "title": "Shiny Wrapper",
+      "description": "A wrapper component that adds a shiny sweeping animation over its children. Supports gradient and solid styles, looping, and hover-only mode.",
+      "files": [
+        {
+          "path": "components/shiny-wrap/shiny-wrapper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tilt-image",
+      "type": "registry:ui",
+      "title": "Tilt Card",
+      "description": "A 3D tilt card component that responds to mouse movement with configurable rotation, perspective, and scale.",
+      "files": [
+        {
+          "path": "components/tilt-image/tilt-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-flip-card",
+      "type": "registry:ui",
+      "title": "Hover Flip Card",
+      "description": "A card that flips 180 degrees on hover to reveal a background image with parallax-like mouse tracking.",
+      "files": [
+        {
+          "path": "components/hover-flip-card/hover-flip-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "diamond-gallery",
+      "type": "registry:ui",
+      "title": "Diamond Gallery",
+      "description": "A diamond-shaped gallery layout with 4 images arranged in a cross pattern. Hovering an image expands it while blurring the others.",
+      "files": [
+        {
+          "path": "components/diamond-gallery/diamond-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hoverbox-effect",
+      "type": "registry:ui",
+      "title": "Hover Box Effect",
+      "description": "A 3D box that flips on hover to reveal its back face. Supports configurable perspective, transition duration, and grayscale filter.",
+      "files": [
+        {
+          "path": "components/hoverbox-effect/hovebox-effect.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-gallery",
+      "type": "registry:ui",
+      "title": "Hover Gallery",
+      "description": "A stacked image gallery that expands into a 2x2 grid on hover with smooth motion animations.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/hover-gallery/hover-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inline-table-control",
+      "type": "registry:ui",
+      "title": "Inline Table Control",
+      "description": "An inline-editable table with animated row-to-form transitions, focus management, and spring-based motion layout.",
+      "dependencies": ["motion", "lucide-react", "react-focus-lock"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/inline-table-control/inline-table-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-feed-tabs",
+      "type": "registry:ui",
+      "title": "Scroll Feed Tabs",
+      "description": "A neon-styled tab bar with pointer-reactive glow, animated clip-path transitions, and radial gradient effects. Inspired by Peerlist.",
+      "dependencies": ["@radix-ui/react-tabs", "motion"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/scroll-feed-tabs/scroll-feed-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-disclosure",
+      "type": "registry:ui",
+      "title": "Hover Disclosure",
+      "description": "An accordion-style disclosure panel where hovering an item expands it to reveal full content with image, icon, and description.",
+      "dependencies": ["react-icons"],
+      "files": [
+        {
+          "path": "components/hover-disclosure/hover-disclosure.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/hover-disclosure/hover-disclosure.css",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "svg-filters",
+      "type": "registry:ui",
+      "title": "SVG Filters",
+      "description": "GSAP-powered SVG filter effects including turbulence and displacement map distortion with hover-triggered animations and caption overlays.",
+      "dependencies": ["gsap"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/svg-filters/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/svg-filters/Item.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/svg-filters/svg-filters.css",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "splitflap",
+      "type": "registry:ui",
+      "title": "Splitflap Display",
+      "description": "A splitflap departure-board style display powered by GSAP. Supports configurable text lines, colors, character sets, and play/blank controls.",
+      "dependencies": ["gsap"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/splitflap/splitflap.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/splitflap/splitflap.module.css",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "valorant-button",
+      "type": "registry:ui",
+      "title": "Valorant Button",
+      "description": "A stylized button inspired by Valorant with 4 variants: default (squiggle slice), liquid (morphing layers), neon (glowing flicker), and warp (light streaks).",
+      "files": [
+        {
+          "path": "components/valorant-button/valorant-btn.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/valorant-button/valorant.module.css",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spider-button",
+      "type": "registry:ui",
+      "title": "Spider-Man Button",
+      "description": "A Spider-Man themed animated button with glitch hover effects, color variants, and comic-style click animations powered by motion.",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "components/spiderman-theme-buttons/spider-button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/spiderman-theme-buttons/spiderbtn-animation.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/spiderman-theme-buttons/spider-button.module.css",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "album-card",
+      "type": "registry:ui",
+      "title": "Album Cards",
+      "description": "Expandable album cards that animate open to reveal lyrics with highlighted line cycling. Supports mobile carousel navigation.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/album-card/album-cards.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "artist-list",
+      "type": "registry:ui",
+      "title": "Artist List",
+      "description": "A speaker-style artist list with hover-to-reveal profile images, social links, and spring animations. Responsive with mobile layout support.",
+      "dependencies": ["motion", "lucide-react"],
+      "files": [
+        {
+          "path": "components/vercel-speaker/artist-list.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/vercel-speaker/artist-member.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/vercel-speaker/artist-profile.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/vercel-speaker/social-links.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/vercel-speaker/artist.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "draggable-cards",
+      "type": "registry:ui",
+      "title": "Draggable Cards",
+      "description": "Scattered draggable cards with physics-based drag, z-index stacking, and responsive sizing. Great for album art or portfolio showcases.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "components/draggable-cards/draggable-cards.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

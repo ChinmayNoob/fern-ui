@@ -4,6 +4,7 @@ import { useArtist } from "@/hooks/use-artist"
 import { ArtistList } from "@/components/vercel-speaker/artist-list"
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import { Loader } from "lucide-react"
 import Link from "next/link"
 
@@ -335,6 +336,16 @@ export default function ArtistListPage() {
           </Link>
         </p>
       </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/artist-list"} />
+            </section>
+
 
       {/* Preview */}
       <section className="space-y-4">

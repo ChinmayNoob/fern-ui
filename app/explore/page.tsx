@@ -20,6 +20,7 @@ import {
 } from "lucide-react"
 
 import { CodeBlock } from "@/components/ui/code-block"
+import { InstallCommand } from "@/components/ui/install-command"
 
 const components = [
     {
@@ -150,8 +151,13 @@ const components = [
     },
 ]
 
-const installCode = `# Install dependencies
-pnpm add class-variance-authority clsx tailwind-merge radix-ui motion lucide-react`
+const installCode = `# Add a component from the registry
+npx shadcn@latest add ChinmayNoob/fern-ui/animated-image
+npx shadcn@latest add ChinmayNoob/fern-ui/tilt-image
+npx shadcn@latest add ChinmayNoob/fern-ui/valorant-button
+
+# Or list all available components
+npx shadcn@latest list ChinmayNoob/fern-ui`
 
 const utilsCode = `// lib/utils.ts
 import { clsx, type ClassValue } from "clsx"
@@ -169,7 +175,7 @@ export default function GettingStartedPage() {
                 <h1 className="font-serif text-4xl tracking-tight">Getting Started</h1>
                 <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
                     fern-ui is a collection of minimal, accessible components built with React,
-                    Tailwind CSS, and Radix UI primitives. Copy the components you need into your project.
+                    Tailwind CSS, and Radix UI primitives. Install components directly via the shadcn CLI.
                 </p>
             </div>
 
@@ -177,9 +183,17 @@ export default function GettingStartedPage() {
             <section className="space-y-4">
                 <h2 className="text-lg font-medium">Installation</h2>
                 <p className="text-sm text-muted-foreground">
-                    Start by installing the required dependencies:
+                    Add components to your project using the shadcn CLI:
                 </p>
                 <CodeBlock code={installCode} language="bash" />
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Quick Install</h2>
+                <p className="text-sm text-muted-foreground">
+                    Or add the registry to your project for namespace-based installs:
+                </p>
+                <InstallCommand command="npx shadcn@latest registry add @fern-ui=https://github.com/ChinmayNoob/fern-ui" />
             </section>
 
             {/* Utils */}

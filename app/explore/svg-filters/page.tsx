@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import SvgFilters, { demoSvgFilterItems } from "@/components/svg-filters"
 
 const usageCode = `import SvgFilters from "@/components/svg-filters"
@@ -397,6 +398,16 @@ export default function SvgFiltersPage() {
                     Features turbulence and displacement map filters.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/svg-filters"} />
+            </section>
+
 
             {/* Live Preview - All Items */}
             <section className="space-y-4">

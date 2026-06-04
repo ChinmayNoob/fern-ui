@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import DiamondGallery from "@/components/diamond-gallery/diamond-gallery"
 
 const usageCode = `import DiamondGallery from "@/components/diamond-gallery/diamond-gallery"
@@ -120,6 +121,16 @@ export default function DiamondGalleryPage() {
                     Features hover effects with scale, blur, and grayscale transitions.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/diamond-gallery"} />
+            </section>
+
 
 
             {/* With Links Preview */}

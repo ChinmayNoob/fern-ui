@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 import HoverGallery from "@/components/hover-gallery/hover-gallery"
 
 const usageCode = `import HoverGallery from "@/components/hover-gallery/hover-gallery"
@@ -220,6 +221,16 @@ export default function HoverGalleryPage() {
                     by default and expand into a 2x2 grid on hover with beautiful transitions.
                 </p>
             </div>
+
+            {/* Installation */}
+            <section className="space-y-4">
+                <h2 className="text-lg font-medium">Installation</h2>
+                <p className="text-sm text-muted-foreground">
+                    Install the component using the shadcn CLI:
+                </p>
+                <InstallCommand command={"npx shadcn@latest add ChinmayNoob/fern-ui/hover-gallery"} />
+            </section>
+
 
 
             {/* Live Preview */}

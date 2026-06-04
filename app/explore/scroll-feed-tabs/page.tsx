@@ -1,8 +1,9 @@
 "use client"
 
-import { PeerlistScrollFeedTabs } from "@/components/scroll-feed-tabs/scroll-feed-tabs"
+import { ScrollFeedTabs } from "@/components/scroll-feed-tabs/scroll-feed-tabs"
 import { CodeBlock } from "@/components/ui/code-block"
 import { ComponentPreview } from "@/components/ui/component-preview"
+import { InstallCommand } from "@/components/ui/install-command"
 
 const usageCode = `import { ScrollFeedTabs } from "@/components/scroll-feed-tabs"
 
@@ -73,13 +74,21 @@ export default function ScrollFeedTabsPage() {
       </div>
 
       <section className="space-y-4">
+        <h2 className="text-lg font-medium">Installation</h2>
+        <p className="text-sm text-muted-foreground">
+          Install the component using the shadcn CLI:
+        </p>
+        <InstallCommand command="npx shadcn@latest add ChinmayNoob/fern-ui/scroll-feed-tabs" />
+      </section>
+
+      <section className="space-y-4">
         <h2 className="text-lg font-medium">Preview</h2>
         <p className="text-sm text-muted-foreground">
           Switch tabs, then move the pointer across the track to shift the glow.
         </p>
         <ComponentPreview className="min-h-[220px] p-8">
           <div className="inline-block w-fit max-w-none">
-            <PeerlistScrollFeedTabs />
+            <ScrollFeedTabs />
           </div>
         </ComponentPreview>
       </section>

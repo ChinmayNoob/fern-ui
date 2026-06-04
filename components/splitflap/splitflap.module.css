@@ -5,17 +5,21 @@
     --perspective: 1;
     --flip-bg: hsl(var(--card));
     --flip-bg-light: hsl(0 0% 92%);
-    --flip-bg-dark: hsl(0 0% 15%);
+    --flip-bg-dark: hsl(0 0% 88%);
     --flip-accent: hsl(var(--muted));
-    --board-bg: hsl(0 0% 10%);
+    --board-bg: hsl(0 0% 92%);
     --board-bg-light: hsl(0 0% 85%);
+    --flip-text: hsl(0 0% 5%);
+    --clip-color: hsl(0 0% 75%);
 }
 
 /* Dark theme overrides */
 :global(.dark) .root {
     --flip-bg-light: hsl(0 0% 20%);
     --flip-bg-dark: hsl(0 0% 12%);
-    --board-bg: hsl(0 0% 5%);
+    --board-bg: hsl(0 0% 10%);
+    --flip-text: hsl(0 0% 95%);
+    --clip-color: hsl(0 0% 40%);
 }
 
 /* Flip animation layers */
@@ -92,7 +96,7 @@
 /* Individual Flip Character */
 .flip {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: var(--color, hsl(var(--foreground)));
+    color: var(--color, var(--flip-text));
     width: 1.5ch;
     line-height: 1.2;
     display: inline-block;
@@ -110,7 +114,7 @@
     position: absolute;
     width: calc(10% - 0.05em);
     height: calc(20% - 0.05em);
-    background: hsl(var(--muted));
+    background: var(--clip-color);
     top: 50%;
     translate: 0 -50%;
 }
@@ -136,7 +140,7 @@
     overflow: hidden;
     inset: 0;
     background: radial-gradient(100% 100% at 50% 100%,
-            hsl(var(--foreground) / 0.05),
+            hsl(0 0% 0% / 0.03),
             transparent),
         var(--flip-bg-light);
 }
